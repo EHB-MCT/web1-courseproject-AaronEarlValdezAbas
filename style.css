@@ -77,7 +77,6 @@ h1 {
 	background-image: url(afbeelding/pattern.jpg);
 	position: sticky;
 	top: 0px;
-
 }
 .middle-nav {
 	grid-column: 2/3;
@@ -124,7 +123,6 @@ h2 {
 .MoreAboutHim {
 	grid-column: 2/3;
 	grid-row: 2/3;
-
 }
 
 li {
@@ -145,7 +143,6 @@ li {
 	grid-row: 2/3;
 	margin-top: 70px;
 	margin-left: 80px;
-
 }
 
 .art2 {
@@ -164,7 +161,7 @@ li {
 	margin-left: 90px;
 }
 
-.art4{
+.art4 {
 	width: 400px;
 	grid-column: 3/4;
 	grid-row: 2/3;
@@ -181,7 +178,7 @@ li {
 	}
 }
 
-img{
+img {
 	display: inline-block;
 	transition: transform 0.5s;
 }
@@ -213,7 +210,8 @@ img:hover {
 		text-align: center;
 	}
 
-	.status, .studies {
+	.status,
+	.studies {
 		margin-left: 0;
 		text-align: center;
 		font-size: 18px;
@@ -245,7 +243,11 @@ img:hover {
 		padding: 0 10px;
 	}
 
-	.Inkopolis, .art1, .art2, .art3, .art4 {
+	.Inkopolis,
+	.art1,
+	.art2,
+	.art3,
+	.art4 {
 		width: 100%;
 		max-width: 300px;
 		margin: 20px auto 0 auto;
