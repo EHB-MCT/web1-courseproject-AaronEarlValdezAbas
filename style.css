@@ -194,3 +194,67 @@ img:hover {
 	font-size: 13px;
 	padding: 10px;
 }
+
+/* voor mobile*/
+@media screen and (max-width: 768px) {
+	.profile {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.inklingBoy {
+		width: 150px;
+		margin: 10px 0;
+	}
+
+	h1 {
+		font-size: 50px;
+		margin-left: 0;
+		text-align: center;
+	}
+
+	.status, .studies {
+		margin-left: 0;
+		text-align: center;
+		font-size: 18px;
+	}
+
+	.nav {
+		grid-template-columns: 1fr;
+	}
+
+	.middle-nav {
+		grid-column: auto;
+		display: flex;
+		justify-content: center;
+		gap: 10px;
+		margin: 10px 0;
+	}
+	.main {
+		display: block;
+		margin: 20px;
+	}
+
+	h2 {
+		padding-left: 0;
+		text-align: center;
+	}
+
+	.MoreAboutHim {
+		margin-top: 20px;
+		padding: 0 10px;
+	}
+
+	.Inkopolis, .art1, .art2, .art3, .art4 {
+		width: 100%;
+		max-width: 300px;
+		margin: 20px auto 0 auto;
+		grid-column: auto;
+		grid-row: auto;
+	}
+
+	.footer {
+		text-align: center;
+		font-size: 12px;
+	}
+}
