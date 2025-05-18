@@ -58,7 +58,7 @@ h1 {
 	font-size: 25px;
 }
 
-@keyframes loadheader{
+@keyframes loadheader {
 	from {
 		opacity: 0;
 		transform: translateX(-200px);
@@ -70,62 +70,124 @@ h1 {
 	}
 }
 
+/*nav*/
+.nav {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	background-image: url(afbeelding/pattern.jpg);
+	position: sticky;
+	top: 0px;
+
+}
+.middle-nav {
+	grid-column: 2/3;
+	display: flex;
+	justify-content: center;
+	margin: 5px;
+}
+
+.about,
+.skills,
+.experience {
+	color: white;
+	background-color: grey;
+	padding: 5px;
+	margin: 5px;
+	transition: background-color 0.5s;
+}
+
+a:hover {
+	background-color: black;
+}
+
 /*main*/
 .main {
 	margin: 50px;
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 75px  minmax(200px, auto);
+	grid-template-columns: 300px repeat(2, 1fr);
+	/*grid-template-columns: repeat(3, 1fr); */
+	grid-template-rows: 75px minmax(200px, auto);
+	gap: 50px;
+	animation: loadtext;
+	animation-duration: 1s;
+	animation-timing-function: ease;
 }
 
-h2{
+h2 {
 	color: yellow;
 	font-size: 30px;
 	grid-column: 1/2;
 	grid-row: 1/2;
-	animation: loadtext;
-	animation-duration: 1s;
-	animation-timing-function: ease;
-	padding-left: 200px;
-	margin-bottom: 50px;
+	padding-left: 100px;
 }
 
 .MoreAboutHim {
 	grid-column: 2/3;
 	grid-row: 2/3;
-	animation: loadtext;
-	animation-duration: 1s;
-	animation-timing-function: ease;
+
 }
 
 li {
-	margin-bottom: 20px;
+	margin-bottom: 50px;
 }
 
 .Inkopolis {
+	width: 500px;
+	grid-column: 3 / 4;
+	grid-row: 2/3;
+	margin-top: 150px;
+	margin-left: 60px;
+}
+
+.art1 {
 	width: 400px;
 	grid-column: 3 / 4;
 	grid-row: 2/3;
-	border: 5px solid white;
-	border-radius: 5px;
-	margin-top: 150px;
-	margin-left: 60px;
-	animation: loadtext;
-	animation-duration: 1s;
-	animation-timing-function: ease;
+	margin-top: 70px;
+	margin-left: 80px;
 
 }
 
-@keyframes loadtext{
+.art2 {
+	width: 400px;
+	grid-column: 3/4;
+	grid-row: 2/3;
+	margin-top: 400px;
+	margin-left: 80px;
+}
+
+.art3 {
+	width: 300px;
+	grid-column: 3/4;
+	grid-row: 2/3;
+	margin-top: 20px;
+	margin-left: 90px;
+}
+
+.art4{
+	width: 400px;
+	grid-column: 3/4;
+	grid-row: 2/3;
+	margin-top: 550px;
+	margin-left: 50px;
+}
+
+@keyframes loadtext {
 	from {
 		opacity: 0;
 	}
-
 	to {
 		opacity: 1;
 	}
 }
 
+img{
+	display: inline-block;
+	transition: transform 0.5s;
+}
+img:hover {
+	transform: translateY(-10px);
+}
 /*footer*/
 .footer {
 	background-image: url(afbeelding/pattern.jpg);
