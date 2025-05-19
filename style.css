@@ -99,6 +99,11 @@ a:hover {
 	background-color: black;
 }
 
+/* >>> Hamburger menu styles <<< */
+.hamburger-nav {
+  display: none;
+}
+
 /*main*/
 .main {
 	margin: 50px;
@@ -194,6 +199,11 @@ img:hover {
 
 /* voor mobile*/
 @media screen and (max-width: 768px) {
+
+	.nav {
+    display: none;
+  	}
+
 	.profile {
 		flex-direction: column;
 		align-items: center;
@@ -217,17 +227,6 @@ img:hover {
 		font-size: 18px;
 	}
 
-	.nav {
-		grid-template-columns: 1fr;
-	}
-
-	.middle-nav {
-		grid-column: auto;
-		display: flex;
-		justify-content: center;
-		gap: 10px;
-		margin: 10px 0;
-	}
 	.main {
 		display: block;
 		margin: 20px;
@@ -259,4 +258,96 @@ img:hover {
 		text-align: center;
 		font-size: 12px;
 	}
+
+	/*hamburger menu van codepen*/
+  .hamburger-nav {
+    display: block;
+    position: relative;
+    z-index: 10;
+  }
+
+  .check {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    height: 3rem;
+    width: 3rem;
+    opacity: 0;
+    z-index: 3;
+  }
+
+  .check:checked ~ .menu-items {
+    display: block;
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+  .ham-menu {
+    height: 3rem;
+    width: 3rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.5rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: black;
+    border-radius: 0.25em;
+  }
+
+  .ham-menu .line {
+    background-color: white;
+    border-radius: 1em;
+    width: 2rem;
+    height: 0.25rem;
+  }
+
+  .menu-items {
+    position: absolute;
+    list-style: none;
+    padding: 1rem;
+    top: 4.5rem;
+    left: 1rem;
+    opacity: 0;
+    font-size: 1.5rem;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 0.25em;
+    transform: translateX(-10%);
+    transition: transform 100ms ease-in-out, opacity 200ms;
+    z-index: 1;
+  }
+
+  .menu-items li {
+    padding: 0.5rem;
+  }
+
+  .menu-items li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .menu-items li a:hover {
+    color: rgb(174, 174, 174);
+  }
+
+  .check:checked ~ .ham-menu .line1 {
+    transform: rotate(45deg);
+  }
+
+  .check:checked ~ .ham-menu .line2 {
+    opacity: 0;
+  }
+
+  .check:checked ~ .ham-menu .line3 {
+    transform: rotate(-45deg);
+  }
+	.desktop-nav {
+    display: none !important; /* <<< Force hide */
+  }
+    .hamburger-nav {
+    display: block !important;
+  }
 }
